@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelvinix - Our Product</title>
+  <!-- Font Awesome for icons (optional, safe for product points) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="Product.css" />
+</head>
+
+<body>
+
+  <!-- HEADER: UNCHANGED AS REQUESTED -->
+  <header>
+    <div class="logo">
+      <a href="Mainpage.html">
+        <img src="images/logo.png" alt="Kelvinix Logo"/>
+      </a>
+    </div>
+    <nav>
+      <a href="Mainpage.html">Home</a>
+      <a href="Product.html" ></a>Product</a>
+      <a href="Aboutus.html">About Kelvinix</a>
+      <a href="Technology_Partner.html">Partners</a>
+      <a href="How_it_works.html">How it Works</a>
+      <a href="Impact.html">Impact</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+ 
+
+  <!-- PRODUCT HERO SECTION -->
+  <section class="product-hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Our Product</h1>
+        <p>Shaping the Future of Climate Control</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT DETAILS SECTION -->
+  <section class="product-details">
+    <div class="product-card fade-in-up">
+      <div class="product-image-main">
+        <img src="images/product-placeholder.png.jpg" alt="Kelvinix HVAC Prototype">
+        <div class="coming-soon-label">More images coming soon</div>
+      </div>
+      <div class="product-content">
+        <h2>Next-Generation Heating & Cooling for Tomorrow's Homes</h2>
+        <p>
+          At Kelvinix, we are developing a next-generation heating and cooling system designed for the homes and buildings of tomorrow.<br><br>
+          Traditional HVAC systems are bulky, energy-hungry, and expensive to run. Our solution takes a different approach: <span class="highlight">compact, modular, and highly energy-efficient</span>, tailored for the unique needs of Irish and European housing.
+        </p>
+        <ul class="product-benefits">
+          <li><i class="fas fa-bolt"></i>Reduce energy consumption compared to conventional units</li>
+          <li><i class="fas fa-euro-sign"></i>Lower household bills while maintaining year-round comfort</li>
+          <li><i class="fas fa-cubes"></i>Simplify installation with a modular “plug-and-fix” design</li>
+          <li><i class="fas fa-leaf"></i>Integrate with retrofit and green building programs</li>
+        </ul>
+        <p>
+          Currently in the feasibility and prototyping phase, our product is supported by Irish innovation funding and backed by global partnerships. With each step, we are moving closer to market readiness — bringing a smarter, greener way to heat and cool homes.
+        </p>
+        <div class="product-note">
+          <strong>This is more than a product.</strong> It’s the beginning of a new standard in sustainable comfort.
+        </div>
+        <a class="enquiry-btn" href="Contact.html">
+          <i class="fas fa-envelope"></i> Enquire to Know More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Fade-in animation as you scroll
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.fade-in-up');
+      for (const el of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add("active");
+        }
+      }
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelvinix - Technology Partners</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="Technology_Partner.css" />
+</head>
+<body>
+  <!-- HEADER: unchanged as requested -->
+  <header>
+    <div class="logo">
+      <a href="Mainpage.html">
+        <img src="images/logo.png" alt="Kelvinix Logo" />
+      </a>
+    </div>
+    <nav>
+      <a href="Mainpage.html">Home</a>
+      <a href="Product.html">Product</a>
+      <a href="Aboutus.html">About Kelvinix</a>
+      <a href="Technology_Partner.html" class="active">Partners</a>
+      <a href="How_it_works.html">How it Works</a>
+      <a href="Impact.html">Impact</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="partners-hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Our Technology Partners</h1>
+        <p>Collaborating globally for sustainable innovation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS LIST -->
+  <section class="partners-list">
+    <div class="partner-card fade-in-up">
+      <div class="logo-container">
+        <img src="images/mcdberl_logo.png.jpeg" alt="McD BERL Logo" />
+      </div>
+      <h2>McD BERL</h2>
+      <p>A 22-year-old global leader in sustainable MEP systems specializing in green building design and engineering.</p>
+      <a href="https://www.mcdberl.com" target="_blank" class="partner-link"><i class="fas fa-external-link-alt"></i> Visit Website</a>
+    </div>
+
+    <div class="partner-card fade-in-up">
+      <div class="logo-container">
+        <img src="images/partner-placeholder.png" alt="Upcoming Partner Logo" />
+      </div>
+      <h2>Future Partners</h2>
+      <p>We are actively building relationships with international leaders to drive innovation and scale impact.</p>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <p>Kelvinix &copy; 2025. Innovating for a sustainable future.</p>
+  </footer>
+
+  <script>
+    // Fade-in on scroll for partner cards
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.fade-in-up');
+      for (const el of reveals) {
+        const windowH = window.innerHeight;
+        const elemTop = el.getBoundingClientRect().top;
+        if (elemTop < windowH - 120) {
+          el.classList.add('active');
+        }
+      }
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+</body>
+</html>

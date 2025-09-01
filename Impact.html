@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelvinix - Impact</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="Impact.css" />
+</head>
+<body>
+  <!-- HEADER: unchanged as requested -->
+      <header>
+        <div class="logo">
+             <img src="images\logo.png">
+             </div>
+             
+    <nav>
+        <a href="Mainpage.html">Home</a>
+        <a href="Product.html">Product</a>
+        <a href="Aboutus.html">About Kelvinix</a>
+        <a href="Technology_Partner.html">Partner</a>
+        <a href="How_it_works.html">How it works</a>
+        <a href="Impact.html">Impact</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+</header>
+
+  <!-- HERO SECTION -->
+  <section class="impact-hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Our Impact</h1>
+        <p>Driving sustainable change for buildings, communities, and the planet</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT HIGHLIGHTS -->
+  <section class="impact-highlights">
+    <div class="impact-card fade-in-up">
+      <div class="icon"><i class="fas fa-leaf"></i></div>
+      <h2>Carbon Reduction</h2>
+      <p>Reducing carbon emissions in buildings by up to 35% through ultra-efficient HVAC systems and renewable energy integration.</p>
+    </div>
+
+    <div class="impact-card fade-in-up">
+      <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
+      <h2>Cost Savings</h2>
+      <p>Helping households and businesses lower energy bills by up to 30% with smart, modular heating and cooling solutions.</p>
+    </div>
+
+    <div class="impact-card fade-in-up">
+      <div class="icon"><i class="fas fa-users"></i></div>
+      <h2>Job Creation</h2>
+      <p>Supporting local economies by creating skilled green jobs in Ireland, with over 100 roles expected by Year 3.</p>
+    </div>
+
+    <div class="impact-card fade-in-up">
+      <div class="icon"><i class="fas fa-globe"></i></div>
+      <h2>Global Reach</h2>
+      <p>Partnering internationally to scale sustainable building solutions throughout the EU and beyond.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <p>Kelvinix &copy; 2025. Innovating for a sustainable future.</p>
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll for impact cards
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.fade-in-up');
+      for (const el of reveals) {
+        const windowH = window.innerHeight;
+        const elemTop = el.getBoundingClientRect().top;
+        if (elemTop < windowH - 120) {
+          el.classList.add('active');
+        }
+      }
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* HowItWorks.css */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom, #f6fdf7, #eff6fd 95%);
+  min-height: 100vh;
+}
+
+/* HEADER */
+/* header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+} */
+header nav {
+  display: flex;             /* Use Flexbox for nav container */
+  flex-direction: row;       /* Keep links in a horizontal row */
+  justify-content: center;   /* Center the nav links horizontally */
+  align-items: center;       /* Vertically align links */
+  flex-wrap: wrap;           /* Allow wrapping but keep horizontal layout */
+  gap: 1rem;                 /* Optional: controls spacing between links */
+  margin-left: auto;         /* Push nav links to the right (optional) */
+}
+
+
+.logo img {
+  width: 140px;
+  height: auto;
+}
+
+header nav a {
+  color: black;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #2e8b57;
+  border-bottom: 2px solid #2e8b57;
+}
+
+/* HERO */
+.how-hero {
+  position: relative;
+  background: url('images/main_page2.jpg') center center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.hero-overlay {
+  background: rgba(46, 139, 87, 0.7);
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 2.9rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0,0,0,0.32);
+}
+.hero-content p {
+  font-size: 1.35rem;
+  max-width: 720px;
+  margin: 0 auto;
+  font-weight: 400;
+  text-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+/* MAIN CONTENT */
+.how-it-works-sections {
+  max-width: 950px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+/* INFO CARD */
+.info-card {
+  background: white;
+  box-shadow: 0 8px 30px rgba(46, 139, 87, 0.10);
+  border-radius: 14px;
+  display: flex;
+  gap: 35px;
+  padding: 26px 30px;
+  flex-wrap: nowrap;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 22px 45px rgba(46, 139, 87, 0.2);
+}
+
+/* Alternate background for even cards */
+.info-card.alternate {
+  background: #f9fef8;
+}
+
+/* ICON */
+.icon {
+  background: #2e8b57;
+  color: white;
+  font-size: 2.35rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px #2e8b5744;
+}
+
+/* CONTENT */
+.content h2 {
+  font-size: 1.55rem;
+  color: #2e8b57;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: #3e3e3e;
+  max-width: 680px;
+}
+
+/* FOOTER */
+.page-footer {
+  text-align: center;
+  padding: 28px 20px;
+  background: white;
+  border-top: 1.5px solid #e2efe4;
+  font-size: 0.94rem;
+  color: #6b7c62;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .icon {
+    margin-bottom: 15px;
+  }
+  .content p,
+  .content h2 {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .content h2 {
+    font-size: 1.3rem;
+  }
+  .content p {
+    font-size: 1rem;
+  }
+  .icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.8rem;
+  }
+}

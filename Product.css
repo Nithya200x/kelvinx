@@ -1,0 +1,226 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #f6fdf7, #eff6fd 95%);
+  color: #333;
+  min-height: 100vh;
+}
+
+
+/* header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+} */
+header nav {
+  display: flex;             /* Use Flexbox for nav container */
+  flex-direction: row;       /* Keep links in a horizontal row */
+  justify-content: center;   /* Center the nav links horizontally */
+  align-items: center;       /* Vertically align links */
+  flex-wrap: wrap;           /* Allow wrapping but keep horizontal layout */
+  gap: 1rem;                 /* Optional: controls spacing between links */
+  margin-left: auto;         /* Push nav links to the right (optional) */
+}
+
+
+.logo img {
+  width: 140px;
+  height: auto;
+}
+
+header nav a {
+  color: black;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #2e8b57;
+  border-bottom: 2px solid #2e8b57;
+}
+
+/* HERO SECTION */
+.product-hero {
+  background: url('images/main_page2.jpg') center center/cover no-repeat;
+  position: relative;
+  color: white;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+}
+.hero-overlay {
+  background: rgba(46, 139, 87, 0.69);
+  width: 100%;
+  padding: 80px 20px 60px 20px;
+  text-align: center;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 2.55rem;
+  margin-bottom: 0.45rem;
+  font-weight: bold;
+  text-shadow: 1px 1.5px 10px rgba(40,80,40,0.11);
+}
+.hero-content p {
+  font-size: 1.28rem;
+  font-weight: 500;
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+/* PRODUCT DETAILS SECTION */
+.product-details {
+  max-width: 1080px;
+  margin: 55px auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  padding: 0 20px 60px;
+}
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(46,139,87,0.07), 0 1.5px 3.5px rgba(46,139,87,0.04);
+  padding: 40px 35px 32px 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 38px;
+  align-items: flex-start;
+  transition: 0.28s;
+}
+.product-card:hover {
+  transform: translateY(-5px) scale(1.012);
+  box-shadow: 0 16px 46px -4px rgba(46,139,87,0.16), 0 2px 4px rgba(30,60,75,0.07);
+}
+.product-image-main {
+  max-width: 350px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.product-image-main img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 13px;
+  box-shadow: 0 7px 38px #2e8b5717;
+  min-height: 180px;
+  background: #f4fbf8;
+  object-fit: contain;
+}
+.coming-soon-label {
+  margin-top: 15px;
+  font-size: 1.04rem;
+  color: #72a48d;
+  font-style: italic;
+  background: #f6fff8;
+  border-radius: 7px;
+  padding: 3px 10px;
+  border: 1px dashed #b5e8c9;
+}
+.product-content {
+  flex: 2.4;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.product-content h2 {
+  color: #2e8b57;
+  font-weight: 600;
+  font-size: 1.41rem;
+  margin-top: 0;
+}
+.product-content .highlight {
+  color: #19663b;
+  font-weight: 550;
+}
+
+/* BENEFITS LIST */
+.product-benefits {
+  list-style: none;
+  padding: 0; margin: 15px 0 7px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-benefits li {
+  color: #247452;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.10rem;
+}
+.product-benefits i {
+  color: #2e8b57;
+  background: #ebf9f1;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 1.06rem;
+}
+
+/* Note or Highlighted CTA */
+.product-note {
+  margin: 11px 0 0 0;
+  background: #f7fde7;
+  color: #246a46;
+  padding: 13px 19px;
+  border-radius: 9px;
+  font-size: 1.07rem;
+  font-weight: 500;
+  border-left: 5px solid #2e8b57;
+}
+
+/* ENQUIRY BUTTON */
+.enquiry-btn {
+  margin-top: 18px;
+  display: inline-block;
+  background: #2e8b57;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 27px;
+  text-decoration: none;
+  font-size: 1.09rem;
+  box-shadow: 0 3px 13px #2e8b5745;
+  transition: background 0.2s, color 0.2s, box-shadow .2s;
+}
+.enquiry-btn i {
+  margin-right: 9px;
+  font-size: 1rem;
+}
+.enquiry-btn:hover, .enquiry-btn:focus {
+  background: #21603d;
+  color: #e2f8e1;
+  box-shadow: 0 7px 22px #2e8b5713;
+}
+
+/* ===== EFFECTS: Fade in up on scroll ===== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s cubic-bezier(.5,1.35,.4,1), transform 0.6s cubic-bezier(.5,1.35,.4,1);
+}
+.fade-in-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 500px) {
+  .centered {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 22px;
+    font-size: 1rem;
+  }
+}

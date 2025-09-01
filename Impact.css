@@ -1,0 +1,161 @@
+/* Impact.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #f6fdf7, #eff6fd 95%);
+  color: #333;
+  min-height: 100vh;
+}
+/* 
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+} */
+
+header nav {
+  display: flex;             /* Use Flexbox for nav container */
+  flex-direction: row;       /* Keep links in a horizontal row */
+  justify-content: center;   /* Center the nav links horizontally */
+  align-items: center;       /* Vertically align links */
+  flex-wrap: wrap;           /* Allow wrapping but keep horizontal layout */
+  gap: 1rem;                 /* Optional: controls spacing between links */
+  margin-left: auto;         /* Push nav links to the right (optional) */
+}
+
+.logo img {
+  width: 140px;
+  height: auto;
+}
+
+header nav a {
+  color: black;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #2e8b57;
+  border-bottom: 2px solid #2e8b57;
+}
+/* HERO */
+.impact-hero {
+  background: url('images/main_page2.jpg') center center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+.hero-overlay {
+  background: rgba(46, 139, 87, 0.7);
+  width: 100%;
+  height: 100%;
+  padding: px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0,0,0,0.35);
+}
+.hero-content p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* IMPACT HIGHLIGHTS */
+.impact-highlights {
+  max-width: 950px;
+  margin: 65px auto 70px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 38px;
+}
+
+/* SINGLE IMPACT CARD */
+.impact-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(46,139,87,0.1);
+  padding: 35px 25px 38px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.impact-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.impact-card .icon {
+  font-size: 3.4rem;
+  color: #2e8b57;
+  background: #e4f8df;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 12px #2e8b5715;
+}
+
+.impact-card h2 {
+  font-size: 1.6rem;
+  color: #2e8b57;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.impact-card p {
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: #3b3b3b;
+  max-width: 290px;
+}
+
+/* FOOTER */
+.page-footer {
+  text-align: center;
+  padding: 28px 20px;
+  background: white;
+  border-top: 1.5px solid #d7e7cf;
+  font-size: 0.94rem;
+  color: #6b7c62;
+}
+
+@media (max-width: 480px) {
+  .impact-card p {
+    max-width: 100%;
+    font-size: 1rem;    /* Adjust font size if needed */
+    padding: 16px 22px; /* Add padding if needed for spacing */
+  }
+}
+
